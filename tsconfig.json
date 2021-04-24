@@ -8,8 +8,10 @@
     "strictNullChecks":false,
     "types": ["node",
       "webdriverio/sync",
-      "@wdio/appium-service"
+      "@wdio/appium-service",
+      "jest", 
     ]
+    
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"],
