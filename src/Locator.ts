@@ -1,7 +1,7 @@
-import { IOSPredicateString } from "./locator-strategies/IOSPredicateStringLocator";
-import { LocatorStrategy } from "./locator-strategies/LocatorStrategy";
-import { UIAutomator } from "./locator-strategies/UIAutomatorLocator";
-import { Selector } from "./selectors/Selector";
+import { IOSPredicateString } from './locator-strategies/IOSPredicateStringLocator';
+import { LocatorStrategy } from './locator-strategies/LocatorStrategy';
+import { UIAutomator } from './locator-strategies/UIAutomatorLocator';
+import { Selector } from './selectors/Selector';
 
 export enum LocatorStrategyType {
   XPATH,
@@ -20,7 +20,7 @@ export class Locator {
         break;
       default:
         if (browser.isAndroid) {
-          this.strategy = new UIAutomator(); //TODO replace proper android default strategy
+          this.strategy = new UIAutomator(); // TODO replace proper android default strategy
         } else {
           this.strategy = new IOSPredicateString();
         }

@@ -1,4 +1,4 @@
-import { Selector } from "../selectors/Selector";
+import { Selector } from '../selectors/Selector';
 
 export abstract class LocatorStrategy {
   protected selector: Selector;
@@ -21,21 +21,19 @@ export abstract class LocatorStrategy {
 
   label(): string {
     this.checkSelector();
-    let property: string = browser.isIOS ? "label" : "text";
+    const property: string = browser.isIOS ? 'label' : 'text';
     return $(this.selector.selector).getAttribute(property);
   }
 
   value(): string {
     this.checkSelector();
-    let property: string = browser.isIOS ? "value" : "value";
+    const property: string = browser.isIOS ? 'value' : 'value';
     return $(this.selector.selector).getAttribute(property);
   }
 
   checkSelector(): void {
-    if (this.selector === null || this.selector.selector === "") {
-      throw new Error(
-        "Selector string is empty. You should build selector before click,pick etc."
-      );
+    if (this.selector === null || this.selector.selector === '') {
+      throw new Error('Selector string is empty. You should build selector before click,pick etc.');
     }
   }
 
