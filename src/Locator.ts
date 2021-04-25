@@ -51,7 +51,3 @@ export class Locator {
     return this.strategy.select();
   }
 }
-// locator = new Locator(PREDICT)
-// selector->
-// locator.select().contains().and().build().click()
-// locator.click()
