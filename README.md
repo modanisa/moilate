@@ -98,6 +98,7 @@ Currently supported events as follows;
  - pick(value:string) : to pick a value from selected dropdown.
  - exists() : to check whether selected element is exist or not.
  - wait(timeout: number = 5000): to wait certain time, default waiting time is 5000ms. To use this function query building is not needed like; 
+  
 	 ```typescript
 	 this.locator.wait()
 	 ```
