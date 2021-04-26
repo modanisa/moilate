@@ -16,7 +16,7 @@ Moilate is a element selector which makes element selection easy for e2e testing
   - [Contributors](#contributors)
   - [License](#license)
 
-## Overview
+## Overview 
 
 Moilate's aim is to simplify the element selection for both **android** and **ios** drivers which are **UIAutomator**, **IOS Predicate String** etc. It uses those native drivers via webdriverio and translate each of them syntax into perceptible query pattern. In addition, this query pattern provides common functions for both platform with catch syntax. *For example;*
 
