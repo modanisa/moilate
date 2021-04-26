@@ -104,6 +104,8 @@ Currently supported events as follows;
 	 ```
 
 ## Examples
+- on IOS; 
+
 ```typescript
 
 if (browser.isIOS) {
@@ -132,6 +134,8 @@ this.locator
 this.locator.wait(4000)
 }
 ```
+
+- on Android; 
 
 ```typescript
 if (browser.isAndroid) { // For Android 
