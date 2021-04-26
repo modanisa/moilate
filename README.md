@@ -163,6 +163,9 @@ To contribute moilate, you can follow Contribution.md
 
 ## Contributors
 
+<a href = "https://github.com/modanisatech/moilate/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=modanisatech/moilate"/>
+</a>
 
 ## License
 Moilate is [MIT licensed](https://github.com/modanisatech/moilate/blob/master/LICENSE)
