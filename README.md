@@ -166,7 +166,7 @@ this.locator
 
 To contribute moilate, you can follow Contribution.md
 
-## Contributors
+## Credits
 
 <a href = "https://github.com/modanisatech/moilate/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=modanisatech/moilate"/>
