@@ -1,6 +1,6 @@
-import { IOSPredicateStringSelector } from "../selectors/IOSPredicateStringSelector";
-import { Selector } from "../selectors/Selector";
-import { LocatorStrategy } from "./LocatorStrategy";
+import { IOSPredicateStringSelector } from '../selectors/IOSPredicateStringSelector';
+import { Selector } from '../selectors/Selector';
+import { LocatorStrategy } from './LocatorStrategy';
 
 export class IOSPredicateString extends LocatorStrategy {
   pick(value: string): LocatorStrategy {

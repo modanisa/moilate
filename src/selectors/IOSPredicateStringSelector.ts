@@ -1,12 +1,12 @@
-import { LocatorStrategy } from "../locator-strategies/LocatorStrategy";
-import { Selector } from "./Selector";
+import { LocatorStrategy } from '../locator-strategies/LocatorStrategy';
+import { Selector } from './Selector';
 
 export class IOSPredicateStringSelector implements Selector {
   private locator: LocatorStrategy;
   private _selector: string;
   constructor(locator: LocatorStrategy) {
     this.locator = locator;
-    this._selector = "-ios predicate string:";
+    this._selector = '-ios predicate string:';
   }
   contains(key: string, property: string): Selector {
     this._selector += ` ${property} CONTAINS '${key}'`;

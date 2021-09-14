@@ -1,4 +1,4 @@
-import { LocatorStrategy } from "../locator-strategies/LocatorStrategy";
+import { LocatorStrategy } from '../locator-strategies/LocatorStrategy';
 
 export interface Selector {
   contains(key: string, property: string): Selector;
