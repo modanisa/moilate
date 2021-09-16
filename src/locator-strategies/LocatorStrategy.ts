@@ -3,6 +3,12 @@ import { Selector } from '../selectors/Selector';
 export abstract class LocatorStrategy {
   protected selector: Selector;
 
+  getElement(): WebdriverIO.Element {
+    this.checkSelector();
+
+    return $(this.selector.selector);
+  }
+
   click(): LocatorStrategy {
     this.checkSelector();
     $(this.selector.selector).click();
