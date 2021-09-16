@@ -50,6 +50,7 @@ export class UIAutomatorSelector implements Selector {
         break;
       case 'description':
         this._selector += `description("${key}")`;
+        break;
       default:
         throw new Error(`Cannot find ${property} property on android..`);
     }
