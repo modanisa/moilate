@@ -10,6 +10,8 @@ export namespace SelectorProperty {
   export namespace Android {
     export enum UIAutomator {
       RESOURCE_ID = 'resourceId',
+      DESCRIPTION = 'description',
+      TEXT = 'text',
     }
 
     export enum XPath {}
