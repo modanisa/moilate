@@ -96,12 +96,14 @@ describe('UIAutomatorSelector', () => {
     );
   });
 
-  test('child selector', () => {
+  test('child selectors generate correct selector', () => {
     const uiAutomatorSelector = new UIAutomatorSelector(null);
 
     uiAutomatorSelector
       .contains('test-string', SelectorProperty.Android.UIAutomator.DESCRIPTION)
-      .childContains('test-string-2', SelectorProperty.Android.UIAutomator.TEXT);
+      .startChildSelector()
+      .contains('test-string-2', SelectorProperty.Android.UIAutomator.TEXT)
+      .endChildSelector();
 
     expect(uiAutomatorSelector.selector).toBe(
       `android=new UiSelector().descriptionContains("test-string").childSelector(new UiSelector().textContains("test-string-2"))`,

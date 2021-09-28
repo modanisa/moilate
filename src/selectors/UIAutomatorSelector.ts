@@ -27,16 +27,6 @@ export class UIAutomatorSelector implements Selector {
     return this;
   }
 
-  childContains(key: string, property: string): Selector {
-    this._selector += '.childSelector(new UiSelector().';
-
-    this.contains(key, property);
-
-    this._selector += ')';
-
-    return this;
-  }
-
   and(): Selector {
     this._selector += '.';
     return this;
@@ -64,6 +54,18 @@ export class UIAutomatorSelector implements Selector {
       default:
         throw new Error(`Cannot find ${property} property on android..`);
     }
+    return this;
+  }
+
+  startChildSelector(): Selector {
+    this._selector += '.childSelector(new UiSelector().';
+
+    return this;
+  }
+
+  endChildSelector(): Selector {
+    this._selector += ')';
+
     return this;
   }
 
