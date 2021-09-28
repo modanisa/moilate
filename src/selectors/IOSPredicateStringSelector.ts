@@ -12,6 +12,9 @@ export class IOSPredicateStringSelector implements Selector {
     this._selector += ` ${property} CONTAINS '${key}'`;
     return this;
   }
+  childContains(key: string, property: string): Selector {
+    throw new Error('Method not implemented.');
+  }
   exactMatch(key: string, property: string): Selector {
     this._selector += ` ${property} == '${key}'`;
     return this;

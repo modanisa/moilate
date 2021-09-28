@@ -2,6 +2,7 @@ import { LocatorStrategy } from '../locator-strategies/LocatorStrategy';
 
 export interface Selector {
   contains(key: string, property: string): Selector;
+  childContains(key: string, property: string): Selector;
   and(): Selector;
   or(): Selector;
   not(): Selector;

@@ -27,6 +27,16 @@ export class UIAutomatorSelector implements Selector {
     return this;
   }
 
+  childContains(key: string, property: string): Selector {
+    this._selector += '.childSelector(new UiSelector().';
+
+    this.contains(key, property);
+
+    this._selector += ')';
+
+    return this;
+  }
+
   and(): Selector {
     this._selector += '.';
     return this;
