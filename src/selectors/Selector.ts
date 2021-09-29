@@ -6,8 +6,6 @@ export interface Selector {
   or(): Selector;
   not(): Selector;
   exactMatch(key: string, property: string): Selector;
-  startChildSelector(): Selector;
-  endChildSelector(): Selector;
   build(): LocatorStrategy;
   readonly selector: string;
 }

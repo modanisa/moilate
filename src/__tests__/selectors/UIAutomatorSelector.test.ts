@@ -95,18 +95,4 @@ describe('UIAutomatorSelector', () => {
       `android=new UiSelector().description("test-string").text("test-string-2").resourceId("test-string-3")`,
     );
   });
-
-  test('child selectors generate correct selector', () => {
-    const uiAutomatorSelector = new UIAutomatorSelector(null);
-
-    uiAutomatorSelector
-      .contains('test-string', SelectorProperty.Android.UIAutomator.DESCRIPTION)
-      .startChildSelector()
-      .contains('test-string-2', SelectorProperty.Android.UIAutomator.TEXT)
-      .endChildSelector();
-
-    expect(uiAutomatorSelector.selector).toBe(
-      `android=new UiSelector().descriptionContains("test-string").childSelector(new UiSelector().textContains("test-string-2"))`,
-    );
-  });
 });

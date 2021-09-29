@@ -57,18 +57,6 @@ export class UIAutomatorSelector implements Selector {
     return this;
   }
 
-  startChildSelector(): Selector {
-    this._selector += '.childSelector(new UiSelector().';
-
-    return this;
-  }
-
-  endChildSelector(): Selector {
-    this._selector += ')';
-
-    return this;
-  }
-
   build(): LocatorStrategy {
     return this.locator;
   }

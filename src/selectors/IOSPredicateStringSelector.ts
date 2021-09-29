@@ -28,12 +28,6 @@ export class IOSPredicateStringSelector implements Selector {
     this._selector += ` ! `;
     return this;
   }
-  startChildSelector(): Selector {
-    throw new Error('Method not implemented.');
-  }
-  endChildSelector(): Selector {
-    throw new Error('Method not implemented.');
-  }
   build(): LocatorStrategy {
     return this.locator;
   }
