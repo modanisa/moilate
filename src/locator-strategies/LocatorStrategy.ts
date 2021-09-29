@@ -44,5 +44,6 @@ export abstract class LocatorStrategy {
   }
 
   abstract pick(value: string): LocatorStrategy;
+  abstract slowPick(value: string): LocatorStrategy;
   abstract select(): Selector;
 }

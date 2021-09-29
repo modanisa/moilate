@@ -13,6 +13,10 @@ export class IOSPredicateString extends LocatorStrategy {
     return this;
   }
 
+  slowPick(value:string): LocatorStrategy{
+    return this.pick(value);
+  }
+
   select(): Selector {
     this.selector = new IOSPredicateStringSelector(this);
     return this.selector;
