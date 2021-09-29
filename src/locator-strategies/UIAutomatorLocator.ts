@@ -9,6 +9,13 @@ export class UIAutomator extends LocatorStrategy {
     $(selector).click();
     return this;
   }
+  
+  slowPick(value: string): LocatorStrategy {
+    const uiSelector: string = this.selector.selector.split('=')[1];
+    const selector: string = `android=new UiScrollable(${uiSelector}).scrollIntoView(new UiSelector().textContains(\"${value}\"))`;
+    $(selector).click();
+    return this;
+  }
 
   select(): Selector {
     this.selector = new UIAutomatorSelector(this);
