@@ -6,14 +6,14 @@ export class IOSPredicateStringSelector implements Selector {
   private _selector: string;
   constructor(locator: LocatorStrategy) {
     this.locator = locator;
-    this._selector = '-ios predicate string:';
+    this._selector = '-ios predicate string: ';
   }
   contains(key: string, property: string): Selector {
-    this._selector += ` ${property} CONTAINS '${key}'`;
+    this._selector += `${property} CONTAINS '${key}'`;
     return this;
   }
   exactMatch(key: string, property: string): Selector {
-    this._selector += ` ${property} == '${key}'`;
+    this._selector += `${property} == '${key}'`;
     return this;
   }
   and(): Selector {
